@@ -1,13 +1,21 @@
 import Card from "components/card/Card";
-import { Box, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  SimpleGrid,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 // Assets
 import TotalSpent from "views/admin/default/components/TotalSpent";
 import Project from "./components/Project";
+import ColumnsTable from "./components/ColumnsTable";
+import { tableData, eventTableData } from "./variables/tableData";
+import EventsSellingTable from "./components/EventsSellingTable";
 
 export default function UserReports() {
   // Chakra Color Mode
   const textColorPrimary = useColorModeValue("secondaryGray.900", "white");
-  const textColorSecondary = "secondaryGray.600";
   const cardShadow = useColorModeValue(
     "0px 18px 40px rgba(112, 144, 176, 0.12)",
     "unset"
@@ -31,6 +39,14 @@ export default function UserReports() {
           <Project boxShadow={cardShadow} eventsNumber={"13"} mb="20px" />
         </Card>
       </SimpleGrid>
+      <Flex
+        align="center"
+        gap={"10px"}
+        direction={{ base: "column", md: "column" }}
+      >
+        <ColumnsTable tableData={tableData} />
+        <EventsSellingTable tableData={eventTableData} />
+      </Flex>
     </Box>
   );
 }

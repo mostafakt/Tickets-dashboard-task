@@ -52,5 +52,5 @@
   },
   "include": [
     "./src"
-  ], 
+, "src/views/admin/default/components/EventsSellingTable.tsx"  ], 
 }
