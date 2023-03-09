@@ -107,8 +107,6 @@ export default function TotalSpent(props: { [x: string]: any }) {
             chartOptions={lineChartOptionsTotalSpent}
           />
         </Box>
-
-
       </Flex>
     </Card>
   );

@@ -8,6 +8,7 @@ import DataTables from "views/admin/dataTables";
 
 // Auth Imports
 import SignInCentered from "views/auth/signIn";
+import { Events } from "views/admin/events";
 
 const routes = [
   {
@@ -17,8 +18,16 @@ const routes = [
     icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
     component: MainDashboard,
   },
+
   {
     name: "Events",
+    layout: "/admin",
+    icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
+    path: "/events",
+    component: Events,
+  },
+  {
+    name: "tables",
     layout: "/admin",
     icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
     path: "/data-tables",
