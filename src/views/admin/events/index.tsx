@@ -64,6 +64,24 @@ function Events() {
             eventTitle="test"
             image={Project1}
             hostName={"mostafa"}
+          />{" "}
+          <EventCard
+            status="in progress"
+            avalable="15"
+            soled="20"
+            total="35"
+            eventTitle="test"
+            image={Project1}
+            hostName={"mostafa"}
+          />
+          <EventCard
+            status="in progress"
+            avalable="15"
+            soled="20"
+            total="35"
+            eventTitle="test"
+            image={Project1}
+            hostName={"mostafa"}
           />
         </Flex>
       </Card>
