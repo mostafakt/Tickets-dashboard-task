@@ -25,7 +25,7 @@ export default function UserReports() {
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
       <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap="20px" mb="20px">
         <TotalSpent />
-        <Card height={"170px"} mb={{ base: "0px", "2xl": "20px" }}>
+        <Card   mb={{ base: "0px", "2xl": "20px" }}>
           <Text
             color={textColorPrimary}
             fontWeight="bold"
@@ -36,7 +36,18 @@ export default function UserReports() {
             Notices
           </Text>
 
-          <Project boxShadow={cardShadow} eventsNumber={"13"} mb="20px" />
+          <Project
+            live={true}
+            boxShadow={cardShadow}
+            eventsNumber={"13"}
+            mb="20px"
+          />
+          <Project
+            live={false}
+            boxShadow={cardShadow}
+            eventsNumber={"13"}
+            mb="20px"
+          />
         </Card>
       </SimpleGrid>
       <Flex

@@ -25,6 +25,7 @@ import {
 // Custom components
 import Card from "components/card/Card";
 import Menu from "components/menu/MainMenu";
+import { Link, NavLink } from "react-router-dom";
 
 type RowObj = {
   event: string;
@@ -108,7 +109,9 @@ export default function EventsSellingTable(props: { tableData: any }) {
           >
             Recent Orders
           </Text>
-          <Button>Sell All</Button>
+          <Link to={"/admin/events"}>
+            <Button>Sell All</Button>
+          </Link>
         </Flex>
         <Menu />
       </Flex>

@@ -9,6 +9,7 @@ import {
 import Project1 from "assets/img/profile/Project1.png";
 import Card from "components/card/Card";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import ButtonsRow from "./components/ButtonsRow";
 import { EventCard } from "./components/EventCard";
 function Events() {
@@ -40,16 +41,18 @@ function Events() {
           </Text>
           <ButtonsRow setState={setEventState} />
         </Flex>
-        <Button
-          bg={boxBg}
-          fontSize="2xl"
-          fontWeight="500"
-          color={textColorSecondary}
-          maxWidth={"250px"}
-          borderRadius="7px"
-        >
-          Add a new event
-        </Button>
+        <NavLink to={"/admin" + "/addevent"}>
+          <Button
+            bg={boxBg}
+            fontSize="2xl"
+            fontWeight="500"
+            color={textColorSecondary}
+            maxWidth={"250px"}
+            borderRadius="7px"
+          >
+            Add a new event
+          </Button>
+        </NavLink>
         <Flex
           align="center"
           gap={"10px"}
