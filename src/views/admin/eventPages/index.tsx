@@ -1,13 +1,8 @@
 import { Box } from "@chakra-ui/react";
 import Sidebar from "components/sidebar/Sidebar";
-import {
-  getActiveNavbar,
-  getActiveNavbarText,
-  getActiveRoute,
-  getRoutes,
-} from "layouts/admin";
+import { getRoutes } from "layouts/admin";
 import React from "react";
-import { Redirect, Switch } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import routes from "./routes";
 import Project1 from "assets/img/profile/Project1.png";
 
@@ -22,6 +17,7 @@ const EventPages = () => {
         w={{ xl: "calc(100vw - 600px)", sm: "100%" }}
         float={"unset"}
         ml={{ xl: "157px", sm: "0px" }}
+        mt={"92px"}
       >
         <Switch>{getRoutes(routes)}</Switch>
       </Box>

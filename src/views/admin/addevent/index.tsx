@@ -2,7 +2,6 @@ import { CalendarIcon, TimeIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
-  Checkbox,
   Flex,
   FormControl,
   FormLabel,
@@ -14,13 +13,10 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import Card from "components/card/Card";
-import Sidebar from "components/sidebar/Sidebar";
 import { Upload } from "./components/Upload";
 function AddEvent() {
   // Chakra Color Mode
-  const textColorPrimary = useColorModeValue("secondaryGray.900", "white");
   const textColorSecondary = useColorModeValue("secondaryGray.600", "white");
-  const boxBg = useColorModeValue("secondaryGray.300", "whiteAlpha.100");
   const brandStars = useColorModeValue("brand.500", "brand.400");
   const textColor = useColorModeValue("navy.700", "white");
   const LinkColor = useColorModeValue("orange.700", "red");
@@ -28,7 +24,7 @@ function AddEvent() {
 
   return (
     <>
-      <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
+      <Box pt={{ base: "50px", md: "0px" }}>
         <Card mb={{ base: "0px", "2xl": "20px" }}>
           <Text color={textColor} fontSize="2xl" ms="24px" fontWeight="700">
             Your event type:

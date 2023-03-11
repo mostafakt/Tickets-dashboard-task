@@ -12,7 +12,6 @@ import {
   useDisclosure,
   DrawerContent,
   DrawerCloseButton,
-  Image,
 } from "@chakra-ui/react";
 import Content from "components/sidebar/components/Content";
 import {
@@ -53,6 +52,7 @@ function Sidebar(props: {
       mt={subBar ? "89.4px" : "0px"}
       border={subBar ? "1px" : "none"}
       borderLeft={"0px"}
+      borderBottom={"0px"}
       // borderRight={}
       borderColor={"rgba(135, 140, 189, 0.3)"}
       borderRightRadius={subBar ? "15px" : "none"}

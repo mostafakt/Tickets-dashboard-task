@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Flex,
-  SimpleGrid,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import Project1 from "assets/img/profile/Project1.png";
 import Card from "components/card/Card";
 import { useState } from "react";
@@ -17,6 +10,7 @@ function Events() {
   const textColorPrimary = useColorModeValue("secondaryGray.900", "white");
   const textColorSecondary = useColorModeValue("black", "white");
   const boxBg = useColorModeValue("secondaryGray.100", "whiteAlpha.100");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [eventState, setEventState] = useState(1);
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
@@ -41,7 +35,7 @@ function Events() {
           </Text>
           <ButtonsRow setState={setEventState} />
         </Flex>
-        <NavLink to={"/admin" + "/eventDes"}>
+        <NavLink to={"/admin/eventDes/addevent"}>
           <Button
             bg={boxBg}
             fontSize="2xl"

@@ -1,16 +1,12 @@
 import { Icon } from "@chakra-ui/react";
-import { MdBarChart, MdPerson, MdHome, MdLock } from "react-icons/md";
+import { MdBarChart, MdHome, MdLock } from "react-icons/md";
 
 // Admin Imports
 import MainDashboard from "views/admin/default";
-import Profile from "views/admin/profile";
-import DataTables from "views/admin/dataTables";
-
 // Auth Imports
 import SignInCentered from "views/auth/signIn";
 import { Events } from "views/admin/events";
-import { AddEvent } from "views/admin/addevent";
-import Orders from "views/orders";
+import Orders from "views/admin/orders";
 import { EventPages } from "views/admin/eventPages";
 
 const routes = [
