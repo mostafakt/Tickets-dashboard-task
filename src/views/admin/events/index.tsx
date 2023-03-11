@@ -41,7 +41,7 @@ function Events() {
           </Text>
           <ButtonsRow setState={setEventState} />
         </Flex>
-        <NavLink to={"/admin" + "/addevent"}>
+        <NavLink to={"/admin" + "/eventDes"}>
           <Button
             bg={boxBg}
             fontSize="2xl"

@@ -11,6 +11,7 @@ import SignInCentered from "views/auth/signIn";
 import { Events } from "views/admin/events";
 import { AddEvent } from "views/admin/addevent";
 import Orders from "views/orders";
+import { EventPages } from "views/admin/eventPages";
 
 const routes = [
   {
@@ -49,13 +50,14 @@ const routes = [
     icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
     component: Orders,
   },
+
   {
     sideBar: true,
-    name: "Add Event",
+    name: "Event Pages",
     layout: "/admin",
-    path: "/addevent",
+    path: "/eventDes",
     icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
-    component: AddEvent,
+    component: EventPages,
   },
   {
     name: "Sign In",

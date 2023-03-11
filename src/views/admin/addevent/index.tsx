@@ -14,6 +14,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import Card from "components/card/Card";
+import Sidebar from "components/sidebar/Sidebar";
 import { Upload } from "./components/Upload";
 function AddEvent() {
   // Chakra Color Mode
@@ -84,7 +85,7 @@ function AddEvent() {
               </Link>
             </Text>
             <Flex
-              direction={{ base: "column", md: "row" }}
+              direction={{ base: "column", md: "row", sm: "column" }}
               align="center"
               mb="24px"
             >
