@@ -15,8 +15,8 @@ import { EventCard } from "./components/EventCard";
 function Events() {
   // Chakra Color Mode
   const textColorPrimary = useColorModeValue("secondaryGray.900", "white");
-  const textColorSecondary = useColorModeValue("secondaryGray.600", "white");
-  const boxBg = useColorModeValue("secondaryGray.300", "whiteAlpha.100");
+  const textColorSecondary = useColorModeValue("black", "white");
+  const boxBg = useColorModeValue("secondaryGray.100", "whiteAlpha.100");
   const [eventState, setEventState] = useState(1);
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>

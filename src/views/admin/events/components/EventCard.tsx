@@ -35,7 +35,9 @@ function EventCard(props: {
   const textColorPrimary = useColorModeValue("secondaryGray.900", "white");
   const textColorSecondary = "gray.400";
   const brandColor = useColorModeValue("brand.500", "white");
-  const bg = useColorModeValue("white", "navy.700");
+  const bg = useColorModeValue("secondaryGray.100", "navy.700");
+  const sideBg = useColorModeValue("white", "navy.650");
+
   return (
     <Card bg={bg} {...rest} p="14px">
       <Flex
@@ -79,6 +81,8 @@ function EventCard(props: {
           direction={{ base: "column", md: "row" }}
           border={"1px"}
           borderRadius={"10px"}
+          borderColor={"rgba(135, 140, 189, 0.3)"}
+          bg={sideBg}
         >
           <Flex
             alignItems={"center"}
@@ -88,6 +92,10 @@ function EventCard(props: {
             height={{ md: "100%", base: "auto" }}
             direction={{ base: "column", md: "column" }}
             p={"10px"}
+            borderColor={{
+              base: "rgba(135, 140, 189, 0.3)",
+              md: "rgba(135, 140, 189, 0.3)",
+            }}
           >
             <Text
               fontWeight="800"
@@ -108,6 +116,10 @@ function EventCard(props: {
             height={{ md: "100%", base: "auto" }}
             direction={{ base: "column", md: "column" }}
             p={"10px"}
+            borderColor={{
+              base: "rgba(135, 140, 189, 0.3)",
+              md: "rgba(135, 140, 189, 0.3)",
+            }}
           >
             <Text
               fontWeight="800"
@@ -127,6 +139,10 @@ function EventCard(props: {
             borderBottom={{ base: "1px", md: "0px" }}
             direction={{ base: "column", md: "column" }}
             p={"10px"}
+            borderColor={{
+              base: "rgba(135, 140, 189, 0.3)",
+              md: "rgba(135, 140, 189, 0.3)",
+            }}
           >
             <Text
               fontWeight="800"

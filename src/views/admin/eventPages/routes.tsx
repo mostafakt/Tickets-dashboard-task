@@ -23,7 +23,7 @@ const routes = [
     component: OverviewEvent,
   },
   {
-    name: "Add Event",
+    name: "event details",
     layout: "/admin",
     path: "/eventDes/addevent",
     icon: <AddIcon width="17px" height="17px" color="inherit" />,

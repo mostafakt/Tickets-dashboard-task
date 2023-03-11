@@ -5,12 +5,15 @@ interface IButtonsRow {
 }
 const ButtonsRow = ({ setState }: IButtonsRow) => {
   const textColorPrimary = useColorModeValue("secondaryGray.900", "white");
+  const bg = useColorModeValue("gray.200", "rgba(137, 144, 196, 0.116)");
 
   return (
     <Flex
+      bg={bg}
       direction={{ base: "column", sm: "column", md: "row" }}
       cursor={"pointer"}
-      border={"1px"}
+      // border={"1px"}
+      borderColor={"rgba(135, 140, 189, 0.3)"}
       borderRadius={"15px"}
       height={"auto"}
       alignItems={"center"}
@@ -24,6 +27,10 @@ const ButtonsRow = ({ setState }: IButtonsRow) => {
         width={{ base: "100%", md: "auto" }}
         height={{ md: "100%", base: "auto" }}
         borderBottom={{ base: "1px", md: "0px" }}
+        borderColor={{
+          base: "rgba(135, 140, 189, 0.3)",
+          md: "rgba(135, 140, 189, 0.3)",
+        }}
       >
         <Text color={textColorPrimary} fontWeight="normal" fontSize="sm">
           Upcoming
@@ -38,6 +45,10 @@ const ButtonsRow = ({ setState }: IButtonsRow) => {
         width={{ base: "100%", md: "auto" }}
         height={{ md: "100%", base: "auto" }}
         borderBottom={{ base: "1px", md: "0px" }}
+        borderColor={{
+          base: "rgba(135, 140, 189, 0.3)",
+          md: "rgba(135, 140, 189, 0.3)",
+        }}
       >
         <Text color={textColorPrimary} fontWeight="normal" fontSize="sm">
           Past

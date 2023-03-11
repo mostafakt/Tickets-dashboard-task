@@ -27,6 +27,8 @@ function SidebarContent(props: { routes: RoutesType[]; image?: string }) {
           w={"108px"}
           h={"149px"}
           borderRadius="20px"
+          border={"1px"}
+          borderColor={"rgba(135, 140, 189, 0.3)"}
         />
       )}
       <Stack direction="column" mt="8px" mb="auto">

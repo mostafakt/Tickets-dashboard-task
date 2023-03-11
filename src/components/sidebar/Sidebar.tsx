@@ -39,6 +39,7 @@ function Sidebar(props: {
     "unset"
   );
   // Chakra Color Mode
+  const bg = useColorModeValue("white.500", "navy.700");
   let sidebarBg = useColorModeValue("white", "navy.800");
   let sidebarMargins = "0px";
 
@@ -47,15 +48,18 @@ function Sidebar(props: {
     <Box
       display={{ sm: "none", xl: "block" }}
       position={subBar ? "absolute" : "fixed"}
-      left={subBar ? "10.4px" : "0px"}
+      left={subBar ? "9.4px" : "0px"}
       // minH="100%"
       mt={subBar ? "89.4px" : "0px"}
       border={subBar ? "1px" : "none"}
-      borderRadius={subBar ? "15px" : "none"}
+      borderLeft={"0px"}
+      // borderRight={}
+      borderColor={"rgba(135, 140, 189, 0.3)"}
+      borderRightRadius={subBar ? "15px" : "none"}
     >
       <Box
-        borderRadius={subBar ? "15px" : "none"}
-        bg={sidebarBg}
+        borderRightRadius={subBar ? "15px" : "none"}
+        bg={!subBar ? sidebarBg : bg}
         transition={variantChange}
         w={subBar ? "150px" : "300px"}
         h={subBar ? "calc(100vh - 141.4px)" : "100vh"}
