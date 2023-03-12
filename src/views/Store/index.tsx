@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
+import WithSubnavigation from "./Components/Navbar";
 
 const Store = () => {
-  return (
-    <div>Store</div>
-  )
-}
+  return <div>
+<WithSubnavigation></WithSubnavigation>
 
-export default Store
+  </div>;
+};
+
+export default Store;
