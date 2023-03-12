@@ -1,7 +1,7 @@
 import { Button, Flex, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
-import { TicketCard } from "./TicketCard";
+import { TicketCard } from "./components/TicketCard";
 import Project1 from "assets/img/profile/Project1.png";
 
 const Tickets = () => {
