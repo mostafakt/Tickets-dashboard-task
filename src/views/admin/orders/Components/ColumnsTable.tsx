@@ -28,10 +28,10 @@ import Menu from "components/menu/MainMenu";
 import { Link } from "react-router-dom";
 
 type RowObj = {
-  Customer: string;
-  Order: string;
-  Event: string;
-  Qty: string;
+  orderRef: string;
+  ticketHolder: string;
+  purchased: string;
+  status: string;
 };
 
 const columnHelper = createColumnHelper<RowObj>();
@@ -44,8 +44,8 @@ export default function ColumnTable(props: { tableData: any }) {
   const borderColor = useColorModeValue("gray.200", "whiteAlpha.100");
   let defaultData = tableData;
   const columns = [
-    columnHelper.accessor("Customer", {
-      id: "Customer",
+    columnHelper.accessor("orderRef", {
+      id: "orderRef",
       header: () => (
         <Text
           justifyContent="space-between"
@@ -53,19 +53,19 @@ export default function ColumnTable(props: { tableData: any }) {
           fontSize={{ sm: "10px", lg: "12px" }}
           color="gray.400"
         >
-          Customer
+          Order Ref
         </Text>
       ),
       cell: (info: any) => (
         <Flex align="center">
-          <Text color={textColor} fontSize="sm" fontWeight="700">
+          <Link style={{ color: "orange" }} to={""}>
             {info.getValue()}
-          </Text>
+          </Link>
         </Flex>
       ),
     }),
-    columnHelper.accessor("Order", {
-      id: "Order",
+    columnHelper.accessor("ticketHolder", {
+      id: "ticketHolder",
       header: () => (
         <Text
           justifyContent="space-between"
@@ -73,7 +73,7 @@ export default function ColumnTable(props: { tableData: any }) {
           fontSize={{ sm: "10px", lg: "12px" }}
           color="gray.400"
         >
-          Order
+          TicketHolder
         </Text>
       ),
       cell: (info) => (
@@ -82,8 +82,8 @@ export default function ColumnTable(props: { tableData: any }) {
         </Text>
       ),
     }),
-    columnHelper.accessor("Event", {
-      id: "Event",
+    columnHelper.accessor("purchased", {
+      id: "purchased",
       header: () => (
         <Text
           justifyContent="space-between"
@@ -91,7 +91,7 @@ export default function ColumnTable(props: { tableData: any }) {
           fontSize={{ sm: "10px", lg: "12px" }}
           color="gray.400"
         >
-          Event
+          Purchased
         </Text>
       ),
       cell: (info) => (
@@ -100,8 +100,8 @@ export default function ColumnTable(props: { tableData: any }) {
         </Text>
       ),
     }),
-    columnHelper.accessor("Qty", {
-      id: "Qty",
+    columnHelper.accessor("status", {
+      id: "status",
       header: () => (
         <Text
           justifyContent="space-between"
@@ -109,7 +109,7 @@ export default function ColumnTable(props: { tableData: any }) {
           fontSize={{ sm: "10px", lg: "12px" }}
           color="gray.400"
         >
-          Qty
+          status
         </Text>
       ),
       cell: (info) => (
@@ -138,20 +138,6 @@ export default function ColumnTable(props: { tableData: any }) {
       px="0px"
       overflowX={{ sm: "scroll", lg: "hidden" }}
     >
-      <Flex px="25px" mb="8px" justifyContent="space-between" align="center">
-        <Text
-          color={textColor}
-          fontSize="22px"
-          mb="4px"
-          fontWeight="700"
-          lineHeight="100%"
-        >
-          Recent Orders
-        </Text>
-        <Link to={"/admin/orders"}>
-          <Button>View All Orders</Button>
-        </Link>
-      </Flex>
       <Box>
         <Table variant="simple" color="gray.500" mb="24px" mt="12px">
           <Thead>

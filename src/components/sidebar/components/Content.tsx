@@ -18,7 +18,7 @@ function SidebarContent(props: { routes: RoutesType[]; image?: string }) {
       borderRadius="30px"
       align={"center"}
     >
-      {image && (
+      {image ? (
         <Image
           src={image}
           // w={{ base: "100%", "3xl": "100%" }}
@@ -30,6 +30,8 @@ function SidebarContent(props: { routes: RoutesType[]; image?: string }) {
           border={"1px"}
           borderColor={"rgba(135, 140, 189, 0.3)"}
         />
+      ) : (
+        <Brand />
       )}
       <Stack direction="column" mt="8px" mb="auto">
         <Box ps="20px" pe={{ lg: "16px", "2xl": "16px" }}>
