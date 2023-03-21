@@ -34,7 +34,14 @@ export function SidebarLinks(props: { routes: RoutesType[] }) {
         !route.sideBar
       ) {
         return (
-          <NavLink key={index} to={route.layout + route.path}>
+          <NavLink
+            key={index}
+            to={
+              route.subPath
+                ? route.layout + route.subPath + route.path
+                : route.layout + route.path
+            }
+          >
             {route.icon ? (
               <Box>
                 <HStack

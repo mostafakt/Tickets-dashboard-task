@@ -4,8 +4,8 @@ import "./assets/css/App.css";
 import {
   HashRouter,
   Route,
-  Switch,
-  Redirect,
+  Routes,
+  Navigate,
   BrowserRouter,
 } from "react-router-dom";
 import AuthLayout from "./layouts/auth";
@@ -19,13 +19,12 @@ ReactDOM.render(
   <ChakraProvider theme={theme}>
     <React.StrictMode>
       <BrowserRouter>
-        <Switch>
-          <Route path={`/auth`} component={AuthLayout} />
-          <Route path={`/admin`} component={AdminLayout} />
-          <Route path={`/addEvent`} component={AddEvent} />
-          <Route path={`/store`} component={Store} />
-          <Redirect from="/" to="/admin" />
-        </Switch>
+        <Routes>
+          <Route path={`/auth/*`} element={<AuthLayout />} />
+          <Route path={`/admin/*`} element={<AdminLayout />} />
+          <Route path={`/addEvent`} element={<AddEvent />} />
+          <Route path={`/store`} element={<Store />} />
+        </Routes>
       </BrowserRouter>
     </React.StrictMode>
   </ChakraProvider>,

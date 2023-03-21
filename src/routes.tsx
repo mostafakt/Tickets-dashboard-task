@@ -15,7 +15,7 @@ const routes = [
     layout: "/admin",
     path: "/default",
     icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
-    component: MainDashboard,
+    component: <MainDashboard />,
   },
 
   {
@@ -23,7 +23,7 @@ const routes = [
     layout: "/admin",
     icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
     path: "/events",
-    component: Events,
+    component: <Events />,
   },
   // {
   //   name: "tables",
@@ -44,23 +44,23 @@ const routes = [
     layout: "/admin",
     path: "/orders",
     icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
-    component: Orders,
+    component: <Orders />,
   },
 
   {
     sideBar: true,
     name: "Event Pages",
     layout: "/admin",
-    path: "/eventDes",
+    path: "/eventDes/*",
     icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
-    component: EventPages,
+    component: <EventPages />,
   },
   {
     name: "Sign In",
     layout: "/auth",
     path: "/sign-in",
     icon: <Icon as={MdLock} width="20px" height="20px" color="inherit" />,
-    component: SignInCentered,
+    component: <SignInCentered />,
   },
 ];
 

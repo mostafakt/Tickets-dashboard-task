@@ -6,18 +6,12 @@ import Navbar from "components/navbar/NavbarAdmin";
 import Sidebar from "components/sidebar/Sidebar";
 import { SidebarContext } from "contexts/SidebarContext";
 import { useState } from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import routes from "routes";
 export const getRoutes = (routes: RoutesType[]): any => {
   return routes.map((route: RoutesType, key: any) => {
     if (route.layout === "/admin") {
-      return (
-        <Route
-          path={route.layout + route.path}
-          component={route.component}
-          key={key}
-        />
-      );
+      return <Route path={route.path} element={route.component} key={key} />;
     } else {
       return null;
     }
@@ -81,6 +75,7 @@ export default function Dashboard(props: { [x: string]: any }) {
 
   document.documentElement.dir = "ltr";
   const { onOpen } = useDisclosure();
+
   return (
     <Box>
       <SidebarContext.Provider
@@ -126,10 +121,7 @@ export default function Dashboard(props: { [x: string]: any }) {
               minH="100vh"
               pt="50px"
             >
-              <Switch>
-                {getRoutes(routes)}
-                <Redirect from="/" to="/admin/default" />
-              </Switch>
+              <Routes>{getRoutes(routes)}</Routes>
             </Box>
           ) : null}
           <Box>

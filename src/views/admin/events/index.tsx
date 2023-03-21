@@ -2,6 +2,7 @@ import { Box, Button, Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import Project1 from "assets/img/profile/Project1.png";
 import Card from "components/card/Card";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import ButtonsRow from "./components/ButtonsRow";
 import { EventCard } from "./components/EventCard";
@@ -35,7 +36,7 @@ function Events() {
           </Text>
           <ButtonsRow setState={setEventState} />
         </Flex>
-        <NavLink to={"/admin/eventDes/addevent"}>
+        <Link to={"/admin/eventDes/addeventt"}>
           <Button
             bg={boxBg}
             fontSize="2xl"
@@ -46,7 +47,7 @@ function Events() {
           >
             Add a new event
           </Button>
-        </NavLink>
+        </Link>
         <Flex
           align="center"
           gap={"10px"}

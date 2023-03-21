@@ -7,23 +7,26 @@ const routes = [
   {
     name: "Overview",
     layout: "/admin",
-    path: "/eventDes/overView",
+    path: "/overView",
+    subPath: "/eventDes",
     icon: <ViewIcon width="17px" height="17px" color="inherit" />,
-    component: OverviewEvent,
+    component: <OverviewEvent />,
   },
   {
     name: "event details",
     layout: "/admin",
-    path: "/eventDes/addevent",
+    path: "/addevent",
+    subPath: "/eventDes",
     icon: <AddIcon width="17px" height="17px" color="inherit" />,
-    component: AddEvent,
+    component: <AddEvent />,
   },
   {
     name: "Tickets",
     layout: "/admin",
-    path: "/eventDes/Tickets",
+    path: "/Tickets",
+    subPath: "/eventDes",
     icon: <EditIcon width="17px" height="17px" color="inherit" />,
-    component: Tickets,
+    component: <Tickets />,
   },
 ];
 

@@ -8,9 +8,10 @@ declare global {
   interface RoutesType {
     name: string;
     layout: string;
-    component: () => JSX.Element;
+    component: JSX.Element;
     icon: JSX.Element | string;
     path: string;
+    subPath?: string;
     secondary?: boolean;
     sideBar?: boolean;
   }

@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 import Sidebar from "components/sidebar/Sidebar";
 import { getRoutes } from "layouts/admin";
 import React from "react";
-import { Switch } from "react-router-dom";
+import { Routes } from "react-router-dom";
 import routes from "./routes";
 import Project1 from "assets/img/profile/Project1.png";
 
@@ -19,7 +19,7 @@ const EventPages = () => {
         ml={{ xl: "157px", sm: "0px" }}
         mt={"92px"}
       >
-        <Switch>{getRoutes(routes)}</Switch>
+        <Routes>{getRoutes(routes)}</Routes>
       </Box>
     </>
   );
