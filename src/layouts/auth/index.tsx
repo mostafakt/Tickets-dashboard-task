@@ -17,7 +17,7 @@ export default function Auth() {
   };
   const getRoutes = (routes: RoutesType[]): any => {
     return routes.map((route: RoutesType, key: any) => {
-      if (route.layout === "/auth") {
+      if (route.layout === "") {
         return (
           <Route path={route.path} element={<SignInCentered />} key={key} />
         );
