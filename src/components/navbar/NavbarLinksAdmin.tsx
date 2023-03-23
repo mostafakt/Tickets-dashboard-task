@@ -18,15 +18,16 @@ import { ItemContent } from "components/menu/ItemContent";
 import { SearchBar } from "components/navbar/searchBar/SearchBar";
 import { SidebarResponsive } from "components/sidebar/Sidebar";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useContext } from "react";
 // Assets
 import navImage from "assets/img/layout/Navbar.png";
 import { MdNotificationsNone, MdInfoOutline } from "react-icons/md";
 import { IoMdMoon, IoMdSunny } from "react-icons/io";
 import { FaEthereum } from "react-icons/fa";
-import routes from "routes";
+import routes from "Routing/routes";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
+import { AuthContext } from "contexts/AuthContext";
 export default function HeaderLinks(props: { secondary: boolean }) {
   const { secondary } = props;
   const { colorMode, toggleColorMode } = useColorMode();
@@ -44,6 +45,7 @@ export default function HeaderLinks(props: { secondary: boolean }) {
     "14px 17px 40px 4px rgba(112, 144, 176, 0.06)"
   );
   const borderButton = useColorModeValue("secondaryGray.500", "whiteAlpha.200");
+  const { email } = useContext(AuthContext);
   return (
     <Flex
       w={{ sm: "100%", md: "auto" }}
@@ -171,7 +173,7 @@ export default function HeaderLinks(props: { secondary: boolean }) {
               fontWeight="700"
               color={textColor}
             >
-              👋&nbsp; Hey, Adela
+              👋&nbsp; {email}
             </Text>
           </Flex>
           <Flex flexDirection="column" p="10px">

@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { NavLink, useNavigate, useNavigationType } from "react-router-dom";
 // Chakra imports
 import {
   Box,
@@ -27,7 +27,7 @@ import { RiEyeCloseLine } from "react-icons/ri";
 import { AuthContext } from "contexts/AuthContext";
 
 function SignIn() {
-  // const { dispatch } = useContext(AuthContext);
+  const { action, email: userEmail } = useContext(AuthContext);
   // Chakra color mode
   const textColor = useColorModeValue("navy.700", "white");
   const textColorSecondary = "gray.400";
@@ -48,7 +48,15 @@ function SignIn() {
   const handleClick = () => setShow(!show);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  useEffect(() => {
+    console.log(userEmail);
+  }, [userEmail]);
+
   const handelLogin = async () => {
+    action.login({ email: email, rule: 1 });
+    navigate("/admin/default");
+
     const res = await fetch("api/", {
       method: "POST",
       headers: {
@@ -68,7 +76,7 @@ function SignIn() {
     }
   };
   return (
-    <DefaultAuth illustrationBackground={illustration} image={illustration}>
+    <DefaultAuth image={illustration}>
       <Flex
         maxW={{ base: "100%", md: "max-content" }}
         w="100%"

@@ -1,7 +1,7 @@
 import { createContext, useReducer } from "react";
 
-type User = { email: string; rule: string };
-const initState: User = { email: "", rule: "" };
+type User = { email: string; rule: number };
+const initState: User = { email: "", rule: 0 };
 const ex = {
   ...initState,
   action: {
@@ -17,18 +17,18 @@ export const AuthContext = createContext(ex);
 type Action =
   | {
       type: "LOGIN";
-      payload: { email: string; rule: string };
+      payload: { email: string; rule: number };
     }
   | {
       type: "LOGOUT";
-      payload: { email: string; rule: string };
+      payload: { email: string; rule: number };
     };
 export const authReducer = (state: User, action: Action) => {
   switch (action.type) {
     case "LOGIN":
       return { email: action.payload.email, rule: action.payload.rule };
     case "LOGOUT":
-      return { email: "", rule: "" };
+      return { email: "", rule: 0 };
     default:
       return state;
   }
@@ -51,7 +51,6 @@ export const AuthContextProvider = (props: IProps) => {
         },
       }}
     >
-     
       {props.children}
     </AuthContext.Provider>
   );

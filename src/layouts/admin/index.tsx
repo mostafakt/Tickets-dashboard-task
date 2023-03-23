@@ -7,7 +7,7 @@ import Sidebar from "components/sidebar/Sidebar";
 import { SidebarContext } from "contexts/SidebarContext";
 import { useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import routes from "routes";
+import routes from "Routing/routes";
 export const getRoutes = (routes: RoutesType[]): any => {
   return routes.map((route: RoutesType, key: any) => {
     if (route.layout === "/admin") {

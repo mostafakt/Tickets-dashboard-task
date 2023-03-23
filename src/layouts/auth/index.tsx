@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import routes from "routes";
+import routes from "Routing/routes";
 import SignInCentered from "../../views/auth/signIn";
 // Chakra imports
 import { Box, useColorModeValue } from "@chakra-ui/react";
