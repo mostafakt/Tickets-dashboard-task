@@ -36,12 +36,4 @@ To use the dashboard, you can:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/mostafakt/Tickets-dashboard-task/blob/main/LICENSE) file for details.
-
-## Contributors
-
-This project was created by [Mostafa Kattan](https://github.com/mostafakt), a software engineer at Microsoft. If you have any questions or suggestions, feel free to open an issue or a pull request on GitHub.
-
-Source: Conversation with Bing, 7/31/2023
-(1) GitHub - mostafakt/Tickets-dashboard-task. https://github.com/mostafakt/Tickets-dashboard-task.
-(2) Tickets-dashboard-task/package.json at main · mostafakt ... - GitHub. https://github.com/mostafakt/Tickets-dashboard-task/blob/main/package.json.
-(3) Issues · mostafakt/Tickets-dashboard-task · GitHub. https://github.com/mostafakt/Tickets-dashboard-task/issues.
+ 
